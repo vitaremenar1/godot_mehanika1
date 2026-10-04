@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://brfrglvy71qbd"]
+
+[ext_resource type="Script" uid="uid://bpcwhvqoyf6n3" path="res://scripts/igrac.gd" id="1_dfpsh"]
+[ext_resource type="Texture2D" uid="uid://cqjehbno2w7nh" path="res://assets/icon.svg" id="2_wne0e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wne0e"]
+radius = 27.0
+
+[node name="Igrac" type="CharacterBody2D" unique_id=1372109037 groups=["Igrac"]]
+position = Vector2(41, 45)
+collision_mask = 2
+script = ExtResource("1_dfpsh")
+
+[node name="Slika" type="Sprite2D" parent="." unique_id=644790299]
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_wne0e")
+
+[node name="Oblik" type="CollisionShape2D" parent="." unique_id=1925909765]
+shape = SubResource("CircleShape2D_wne0e")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://i87ae8f15g4j"]
+
+[ext_resource type="Script" uid="uid://bw56byq8wkukr" path="res://scripts/bonus.gd" id="1_3no7k"]
+[ext_resource type="Texture2D" uid="uid://cqjehbno2w7nh" path="res://assets/icon.svg" id="2_piybw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y4odb"]
+radius = 63.212696
+
+[node name="Bonus" type="Area2D" unique_id=1884669440]
+collision_layer = 4
+script = ExtResource("1_3no7k")
+
+[node name="Slika" type="Sprite2D" parent="." unique_id=1650972642 groups=["Predmet"]]
+modulate = Color(0.34064347, 0.99382055, 0.99382055, 1)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("2_piybw")
+
+[node name="Oblik" type="CollisionShape2D" parent="." unique_id=1478182552]
+scale = Vector2(0.38, 0.38)
+shape = SubResource("CircleShape2D_y4odb")

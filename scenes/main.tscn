@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://dhaxaderkuq5v"]
+
+[ext_resource type="PackedScene" uid="uid://brfrglvy71qbd" path="res://scenes/igrac.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://bi13ixetf5ljm" path="res://scenes/predmet.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://i87ae8f15g4j" path="res://scenes/bonus.tscn" id="3_sugp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(20, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgp6g"]
+size = Vector2(20, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
+size = Vector2(960, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_leb1u"]
+size = Vector2(486, 127.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0eyx6"]
+radius = 84.28671
+
+[node name="Main" type="Node2D" unique_id=1792422775]
+
+[node name="Zidovi" type="StaticBody2D" parent="." unique_id=2032733224]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Zid1" type="CollisionShape2D" parent="Zidovi" unique_id=878514953]
+modulate = Color(1, 0.3019608, 0.7058824, 1)
+position = Vector2(10, 300)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="Slika1" type="Polygon2D" parent="Zidovi/Zid1" unique_id=98517883]
+color = Color(1, 0.3019608, 0.7058824, 1)
+polygon = PackedVector2Array(-10, -300, 10, -300, 10, 300, -10, 300)
+
+[node name="Zid2" type="CollisionShape2D" parent="Zidovi" unique_id=1310032385]
+modulate = Color(1, 0.3019608, 0.7058824, 1)
+position = Vector2(950, 300)
+shape = SubResource("RectangleShape2D_sgp6g")
+
+[node name="Slika2" type="Polygon2D" parent="Zidovi/Zid2" unique_id=1140570217]
+color = Color(1, 0.3019608, 0.7058824, 1)
+polygon = PackedVector2Array(-10, -300, 10, -300, 10, 300, -10, 300, -10, -237)
+
+[node name="Zid3" type="CollisionShape2D" parent="Zidovi" unique_id=1949843824]
+modulate = Color(1, 0.3019608, 0.7058824, 1)
+position = Vector2(480, 10)
+shape = SubResource("RectangleShape2D_o5qli")
+
+[node name="Slika3" type="Polygon2D" parent="Zidovi/Zid3" unique_id=1035730649]
+color = Color(1, 0.3019608, 0.7058824, 1)
+polygon = PackedVector2Array(-480, -10, 480, -10, 480, 10, -480, 10, -480, -10)
+
+[node name="Zid4" type="CollisionShape2D" parent="Zidovi" unique_id=202275826]
+modulate = Color(1, 0.3019608, 0.7058824, 1)
+position = Vector2(480, 590)
+shape = SubResource("RectangleShape2D_o5qli")
+
+[node name="Slika4" type="Polygon2D" parent="Zidovi/Zid4" unique_id=596432664]
+color = Color(1, 0.3019608, 0.7058824, 1)
+polygon = PackedVector2Array(-480, -10, 480, -10, 480, 10, -480, 10, -480, -10)
+
+[node name="Igrac" parent="." unique_id=1372109037 instance=ExtResource("1_o5qli")]
+position = Vector2(57, 56)
+
+[node name="Predmet1" parent="." unique_id=1926553474 instance=ExtResource("2_0wfyh")]
+position = Vector2(325, 139)
+
+[node name="Predmet2" parent="." unique_id=1381483577 instance=ExtResource("2_0wfyh")]
+position = Vector2(873, 77)
+
+[node name="Predmet3" parent="." unique_id=1146294903 instance=ExtResource("2_0wfyh")]
+position = Vector2(183, 556)
+
+[node name="Predmet4" parent="." unique_id=1056500533 instance=ExtResource("2_0wfyh")]
+position = Vector2(427, 352)
+
+[node name="Bonus" parent="." unique_id=1884669440 instance=ExtResource("3_sugp2")]
+position = Vector2(711, 539)
+
+[node name="Prepreka" type="StaticBody2D" parent="." unique_id=3640456]
+collision_layer = 2
+collision_mask = 0
+
+[node name="OblikPrepreke" type="CollisionShape2D" parent="Prepreka" unique_id=339804118]
+position = Vector2(693, 373.25)
+shape = SubResource("RectangleShape2D_leb1u")
+
+[node name="Polygon2D" type="Polygon2D" parent="Prepreka/OblikPrepreke" unique_id=293525607]
+modulate = Color(1, 0.3019608, 0.7058824, 1)
+polygon = PackedVector2Array(-239, -61.25, -180, -60.25, -181, -35.25, -154, -35.25, -150, -62.25, -115, -54.25, -88, -34.25, -39, -49.25, 9, -32.25, 44, -63.25, 118, -63.25, 147, -30.25, 191, -32.25, 192, -61.25, 242, -62.25, 242, 45.75, 194, 49.75, 194, 62.75, 113, 61.75, 75, 37.75, 25, 34.75, 10, 56.75, -52, 40.75, -78, 60.75, -116, 42.75, -153, 57.75, -194, 30.75, -209, 50.75, -240, 61.75, -243, -54.25)
+
+[node name="Prepreka2" type="StaticBody2D" parent="." unique_id=1755720645]
+collision_layer = 2
+collision_mask = 0
+
+[node name="OblikPrepreke" type="CollisionShape2D" parent="Prepreka2" unique_id=565407016]
+position = Vector2(222.5, 237)
+shape = SubResource("CircleShape2D_0eyx6")
+
+[node name="Polygon2D" type="Polygon2D" parent="Prepreka2/OblikPrepreke" unique_id=298331366]
+color = Color(1, 0.3019608, 0.7058824, 1)
+polygon = PackedVector2Array(-0.5, -84, -22.5, -82, -40.5, -73, -59.5, -59, -72.5, -43, -81.5, -22, -84.5, 0, -81.5, 23, -73.5, 42, -60.5, 59, -42.5, 73, -22.5, 81, -0.5, 84, 22.5, 81, 42.5, 73, 59.5, 60, 73.5, 42, 81.5, 22, 84.5, 0, 81.5, -22, 73.5, -42, 59.5, -60, 42.5, -73, 21.5, -82)
